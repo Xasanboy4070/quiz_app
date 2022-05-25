@@ -1,0 +1,114 @@
+* {
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+body .game-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .game-zone .quiz-zone {
+  padding: 1rem;
+  width: 800px;
+  height: 500px;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+}
+body .game-zone .quiz-zone .quiz {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border: 1px solid lightblue;
+  background-color: #efed40;
+}
+body .game-zone .quiz-zone .quiz span {
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+body .game-zone .quiz-zone .quiz span:not(:nth-child(2)) {
+  background-color: red;
+  color: #fff;
+}
+body .game-zone .quiz-zone .answers {
+  display: flex;
+  flex-direction: column;
+}
+body .game-zone .quiz-zone .answers .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50%;
+}
+body .game-zone .quiz-zone .answers .row .answer {
+  font-size: 40px;
+  background-color: lightblue;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s linear;
+}
+body .game-zone .quiz-zone .answers .row .answer:active {
+  transform: scale(0.95);
+}
+body .game-zone .points {
+  width: 1200px;
+  height: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  border: 1px solid lightblue;
+  padding: 0.5rem;
+}
+body .game-zone .points .point {
+  width: 50px;
+  color: #fff;
+}
+body .game-zone .points .point--success {
+  background-color: green;
+}
+body .game-zone .points .point--fail {
+  background-color: red;
+}
+body .game-zone .points .point--timeout {
+  background-color: black;
+}
+.nums {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+}
+.quiz-round {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: sans-serif;
+}
+.round{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.second {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-family: sans-serif;
+}
